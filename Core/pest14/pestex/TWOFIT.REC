@@ -1,0 +1,355 @@
+
+                      PEST RUN RECORD: CASE  twofit
+
+
+Case dimensions:-
+
+   Number of parameters                 :    4
+   Number of adjustable parameters      :    4
+   Number of parameter groups           :    4
+   Number of observations               :   13
+   Number of prior estimates            :    0
+
+
+Model command line:-
+
+twoline
+
+
+Model interface files:-
+
+   Templates:
+      in.tpl
+   for model input files:
+      in.dat
+
+   (Parameter values written using single precision protocol.)
+   (Decimal point always included.)
+
+   Instruction files:
+      out.ins
+   for reading model output files:
+      out.dat
+
+
+Derivatives calculation:-
+
+Param Increment   Increment   Increment   Forward or    Multiplier  Method
+group type                    low bound   central       (central)   (central)
+ s1   relative    1.0000E-02   none        switch         2.000     parabolic
+ s2   relative    1.0000E-02   none        switch         2.000     parabolic
+ y1   relative    1.0000E-02   none        switch         2.000     parabolic
+ xc   relative    1.0000E-02   none        switch         2.000     parabolic
+
+
+Parameter definitions:-
+
+Name  Trans-       Change       Initial        Lower          Upper       Group
+      formation    limit        value          bound          bound
+s1    none         relative   0.300000      -1.000000E+10   1.000000E+10  s1
+s2    none         relative   0.800000      -1.000000E+10   1.000000E+10  s2
+y1    none         relative   0.400000      -1.000000E+10   1.000000E+10  y1
+xc    none         relative   0.300000      -1.000000E+10   1.000000E+10  xc
+
+Name      Scale          Offset
+s1        1.00000       0.000000    
+s2        1.00000       0.000000    
+y1        1.00000       0.000000    
+xc        1.00000       0.000000    
+
+
+Prior information:-
+
+   No prior information supplied
+
+
+Observations:-
+
+Observation name    Observation       Weight
+     o1             0.501000          1.000    
+     o2             0.521000          1.000    
+     o3             0.520000          1.000    
+     o4             0.531000          1.000    
+     o5             0.534000          1.000    
+     o6             0.548000          1.000    
+     o7             0.601000          1.000    
+     o8             0.626000          1.000    
+     o9             0.684000          1.000    
+     o10            0.696000          1.000    
+     o11            0.706000          1.000    
+     o12            0.783000          1.000    
+     o13            0.832000          1.000    
+
+
+Inversion control settings:-
+
+   Initial lambda                                               :  5.0000    
+   Lambda adjustment factor                                     :  2.0000    
+   Sufficient new/old phi ratio per optimisation iteration      : 0.30000    
+   Limiting relative phi reduction between lambdas              : 3.00000E-02
+   Maximum trial lambdas per iteration                          :  10
+
+   Maximum  factor  parameter change (factor-limited changes)   :   na
+   Maximum relative parameter change (relative-limited changes) :  3.0000
+   Fraction of initial parameter values used in computing
+   change limit for near-zero parameters                        : 1.00000E-03
+
+   Relative phi reduction below which to begin use of
+   central derivatives                                          : 0.10000     
+
+   Relative phi reduction indicating convergence                : 0.10000E-01
+   Number of phi values required within this range              :   3
+   Maximum number of consecutive failures to lower phi          :   3
+   Maximum relative parameter change indicating convergence     : 0.10000E-01
+   Number of consecutive iterations with minimal param change   :   3
+   Maximum number of optimisation iterations                    :  30
+
+
+
+                            OPTIMISATION RECORD
+
+
+INITIAL CONDITIONS: 
+Sum of squared weighted residuals (ie phi) =   0.2580    
+
+      Current parameter values
+        s1         0.300000    
+        s2         0.800000    
+        y1         0.400000    
+        xc         0.300000    
+
+
+OPTIMISATION ITERATION NO.        :    1
+   Model calls so far             :    1
+   Starting phi for this iteration:   0.2580    
+
+
+   Lambda =    5.000     ----->
+      phi =   3.3933E-03  (  0.013 of starting phi)
+
+   No more lambdas: phi is now less than 0.3000 of starting phi
+   Lowest phi this iteration:   3.3933E-03
+
+      Current parameter values                 Previous parameter values
+        s1         0.371563                       s1         0.300000    
+        s2         0.823508                       s2         0.800000    
+        y1         0.498324                       y1         0.400000    
+        xc         0.187014                       xc         0.300000    
+   Maximum relative parameter change: 0.3766    
+
+
+OPTIMISATION ITERATION NO.        :    2
+   Model calls so far             :    6
+   Starting phi for this iteration:   3.3933E-03
+
+
+   Lambda =    2.500     ----->
+      phi =   1.8059E-03  (  0.532 of starting phi)
+
+   Lambda =    1.250     ----->
+      phi =   1.6303E-03  (  0.480 of starting phi)
+
+   Lambda =   0.6250     ----->
+      phi =   1.4123E-03  (  0.416 of starting phi)
+
+   Lambda =   0.3125     ----->
+      phi =   1.1639E-03  (  0.343 of starting phi)
+
+   Lambda =   0.1563     ----->
+      phi =   9.5580E-04  (  0.282 of starting phi)
+
+   No more lambdas: phi is now less than 0.3000 of starting phi
+   Lowest phi this iteration:   9.5580E-04
+
+      Current parameter values                 Previous parameter values
+        s1         0.338754                       s1         0.371563    
+        s2         0.933565                       s2         0.823508    
+        y1         0.483399                       y1         0.498324    
+        xc         0.168776                       xc         0.187014    
+   Maximum relative parameter change: 0.1336    
+
+
+OPTIMISATION ITERATION NO.        :    3
+   Model calls so far             :   15
+   Starting phi for this iteration:   9.5580E-04
+
+
+   Lambda =   7.8125E-02 ----->
+      phi =   8.0568E-04  (  0.843 of starting phi)
+
+   Lambda =   3.9063E-02 ----->
+      phi =   7.9718E-04  (  0.834 of starting phi)
+
+   No more lambdas: relative phi reduction between lambdas less than 0.0300
+   Lowest phi this iteration:   7.9718E-04
+
+      Current parameter values                 Previous parameter values
+        s1         0.329990                       s1         0.338754    
+        s2         0.963572                       s2         0.933565    
+        y1         0.489431                       y1         0.483399    
+        xc         0.189767                       xc         0.168776    
+   Maximum relative parameter change: 0.1244    
+
+
+OPTIMISATION ITERATION NO.        :    4
+   Model calls so far             :   21
+   Starting phi for this iteration:   7.9718E-04
+
+
+   Lambda =   1.9531E-02 ----->
+      phi =   6.9868E-04  (  0.876 of starting phi)
+
+   Lambda =   9.7656E-03 ----->
+      phi =   7.0133E-04  (  0.880 of starting phi)
+
+   Lambda =   3.9063E-02 ----->
+      phi =   6.9895E-04  (  0.877 of starting phi)
+
+   No more lambdas: phi rising
+   Lowest phi this iteration:   6.9868E-04
+
+      Current parameter values                 Previous parameter values
+        s1         0.250481                       s1         0.329990    
+        s2         0.962780                       s2         0.963572    
+        y1         0.494632                       y1         0.489431    
+        xc         0.171727                       xc         0.189767    
+   Maximum relative parameter change: 0.2409    
+
+
+OPTIMISATION ITERATION NO.        :    5
+   Model calls so far             :   28
+   Starting phi for this iteration:   6.9868E-04
+
+
+   Lambda =   1.9531E-02 ----->
+      phi =   6.7208E-04  (  0.962 of starting phi)
+
+   Lambda =   9.7656E-03 ----->
+      phi =   6.7184E-04  (  0.962 of starting phi)
+
+   No more lambdas: relative phi reduction between lambdas less than 0.0300
+   Lowest phi this iteration:   6.7184E-04
+   Relative phi reduction between optimisation iterations less than 0.1000
+   Switch to central derivatives calculation
+
+      Current parameter values                 Previous parameter values
+        s1         0.243120                       s1         0.250481    
+        s2         0.963990                       s2         0.962780    
+        y1         0.496122                       y1         0.494632    
+        xc         0.174781                       xc         0.171727    
+   Maximum relative parameter change: 2.9388E-02
+
+
+OPTIMISATION ITERATION NO.        :    6
+   Model calls so far             :   34
+   Starting phi for this iteration:   6.7184E-04
+
+
+   Lambda =   4.8828E-03 ----->
+      phi =   6.7108E-04  (  0.999 of starting phi)
+
+   Lambda =   2.4414E-03 ----->
+      phi =   6.7106E-04  (  0.999 of starting phi)
+
+   No more lambdas: relative phi reduction between lambdas less than 0.0300
+   Lowest phi this iteration:   6.7106E-04
+
+      Current parameter values                 Previous parameter values
+        s1         0.237887                       s1         0.243120    
+        s2         0.963446                       s2         0.963990    
+        y1         0.496572                       y1         0.496122    
+        xc         0.173924                       xc         0.174781    
+   Maximum relative parameter change: 2.1522E-02
+
+
+OPTIMISATION ITERATION NO.        :    7
+   Model calls so far             :   44
+   Starting phi for this iteration:   6.7106E-04
+
+
+   Lambda =   1.2207E-03 ----->
+      phi =   6.7145E-04  (  1.001 times starting phi)
+
+   Lambda =   6.1035E-04 ----->
+      phi =   6.7144E-04  (  1.001 times starting phi)
+
+   No more lambdas: relative phi reduction between lambdas less than 0.0300
+   Lowest phi this iteration:   6.7144E-04
+
+      Current parameter values                 Previous parameter values
+        s1         0.240410                       s1         0.237887    
+        s2         0.964052                       s2         0.963446    
+        y1         0.496385                       y1         0.496572    
+        xc         0.174449                       xc         0.173924    
+   Maximum relative parameter change: 1.0603E-02
+
+   Optimisation complete: the  3 lowest phi's are within a relative distance
+                          of eachother of 1.000E-02
+   Total model calls:   54
+
+
+                            OPTIMISATION RESULTS
+
+
+Parameters ----->
+
+Parameter      Estimated           95% percent confidence limits
+               value               lower limit       upper limit
+ s1           0.237887             0.144225          0.331549    
+ s2           0.963446             0.828433           1.09846    
+ y1           0.496572             0.480675          0.512468    
+ xc           0.173924             0.132199          0.215650    
+
+Note: confidence limits provide only an indication of parameter uncertainty.
+      They rely on a linearity assumption which  may not extend as far in 
+      parameter space as the confidence limits themselves - see PEST manual.
+
+
+Observations ----->
+
+Observation    Measured        Calculated      Residual        Weight
+               value           value
+ o1           0.501000        0.508942       -7.942000E-03     1.000    
+ o2           0.521000        0.512748        8.252000E-03     1.000    
+ o3           0.520000        0.521074       -1.074000E-03     1.000    
+ o4           0.531000        0.527021        3.979000E-03     1.000    
+ o5           0.534000        0.537488       -3.488000E-03     1.000    
+ o6           0.548000        0.558251       -1.025100E-02     1.000    
+ o7           0.601000        0.591972        9.028000E-03     1.000    
+ o8           0.626000        0.635327       -9.327000E-03     1.000    
+ o9           0.684000        0.673865        1.013500E-02     1.000    
+ o10          0.696000        0.690243        5.757000E-03     1.000    
+ o11          0.706000        0.707585       -1.585000E-03     1.000    
+ o12          0.783000        0.777917        5.083000E-03     1.000    
+ o13          0.832000        0.840541       -8.541000E-03     1.000    
+
+Sum of squared weighted residuals (ie phi) =  6.7106E-04
+
+
+Covariance Matrix ----->
+
+ 1.7145E-03  -4.8070E-17  -2.6211E-04   5.0450E-04
+-4.8070E-17   3.5626E-03   5.3929E-18   5.8142E-04
+-2.6211E-04   5.3929E-18   4.9390E-05  -5.8484E-05
+ 5.0450E-04   5.8142E-04  -5.8484E-05   3.4027E-04
+
+
+Correlation Coefficient Matrix ----->
+
+  1.000      -1.9450E-14  -0.9007       0.6605    
+-1.9450E-14    1.000       1.2856E-14   0.5281    
+-0.9007       1.2856E-14    1.000      -0.4511    
+ 0.6605       0.5281      -0.4511        1.000    
+
+
+Normalized eigenvectors of covariance matrix ----->
+
+ 0.2055       0.2468      -0.9459       4.7040E-02
+ 3.2458E-02   0.1547       9.6300E-02   0.9827    
+ 0.9578      -0.2497       0.1426      -6.2981E-03
+-0.1986      -0.9235      -0.2752       0.1789    
+
+
+Eigenvalues ----->
+
+ 5.2820E-06   9.2199E-05   1.9008E-03   3.6685E-03

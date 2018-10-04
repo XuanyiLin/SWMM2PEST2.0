@@ -1,0 +1,17 @@
+scf
+* control data
+noverbose
+    4    13
+    1     1 single point  
+* sensan files
+parvar.dat
+out1.txt
+out2.txt
+out3.txt
+* model command line
+twoline > nul
+* model input/output
+in.tpl  in.dat
+out1.ins  out.dat
+
+

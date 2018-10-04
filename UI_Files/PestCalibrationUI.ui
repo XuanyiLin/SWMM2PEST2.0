@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Pest Calibration</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Images/EPA1.png</normaloff>../Images/EPA1.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_chooseObservationFile">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>60</y>
+      <width>351</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Choose Observation Data File:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_observationFile">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>110</y>
+      <width>380</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="observationBrowse">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>110</y>
+      <width>150</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Browse...</string>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_chooseObservationType">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>230</y>
+      <width>351</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Choose Observation Data Type:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_ODT">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>280</y>
+      <width>380</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <item>
+     <property name="text">
+      <string>Drain Outflow</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Total Evaporation</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Surface Infiltration</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Soil Perc</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bottom Infiltration</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Surface Runoff</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Surface Depth</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Soil/Pave Moist</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Storage Depth</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="runCalibrationButton">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>400</y>
+      <width>220</width>
+      <height>47</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Run Calibration</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>../../../../.designer/Images/Go.png</normalon>
+     </iconset>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>38</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,37 @@
+* control data
+5 19
+2 3
+* parameter data
+ro1
+ro2
+ro3
+h1
+h2
+* observation data
+ar1
+ar2
+ar3
+ar4
+ar5
+ar6
+ar7
+ar8
+ar9
+ar10
+ar11
+ar12
+ar13
+ar14
+ar15
+ar16
+ar17
+ar18
+ar19
+* model command line
+ves
+* model input/output
+ves1.tpl a_model.in1
+ves2.tpl a_model.in2
+ves1.ins a_model.ot1
+ves2.ins a_model.ot2
+ves3.ins a_model.ot3

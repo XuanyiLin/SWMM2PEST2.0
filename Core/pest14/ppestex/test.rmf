@@ -1,0 +1,16 @@
+prf
+2 1 .1
+'slave 1' .\test1\
+'slave 2' .\test2
+3 3
+.\test1\a_model.in1
+.\test1\a_model.in2
+.\test1\a_model.ot1
+.\test1\a_model.ot2
+.\test1\a_model.ot3
+.\test2\a_model.in1
+.\test2\a_model.in2
+.\test2\a_model.ot1
+.\test2\a_model.ot2
+.\test2\a_model.ot3
+

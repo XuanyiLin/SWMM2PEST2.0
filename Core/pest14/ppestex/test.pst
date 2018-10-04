@@ -1,0 +1,52 @@
+pcf
+* control data
+restart estimation
+5 19 2 0 1
+2 3 single point 1 0 0
+5 2 0.3 0.03 10
+3 3 0.001
+0.1
+30 0.01 3 3 0.01 3
+1 1 1
+* group definitions and derivative data
+ro relative 0.001 0.0001 switch 2 parabolic
+hhh relative 0.001 0.0001 switch 2 parabolic
+* parameter data
+ro1 log factor 6 0.1 10000 ro 1 0 1
+ro2 log factor 2 0.1 10000 ro 1 0 1
+ro3 log factor 5 0.1 10000 ro 1 0 1
+h1 log factor 1 0.05 100 hhh 1 0 1
+h2 log factor 2 0.05 100 hhh 1 0 1
+* observation groups
+obsgroup
+* observation data
+ar1 1.21038 1  obsgroup
+ar2 1.51208 1  obsgroup
+ar3 2.07204 1  obsgroup
+ar4 2.94056 1  obsgroup
+ar5 4.15787 1  obsgroup
+ar6 5.7762 1  obsgroup
+ar7 7.7894 1  obsgroup
+ar8 9.99743 1  obsgroup
+ar9 11.8307 1  obsgroup
+ar10 12.3194 1  obsgroup
+ar11 10.6003 1  obsgroup
+ar12 7.00419 1  obsgroup
+ar13 3.44391 1  obsgroup
+ar14 1.58279 1  obsgroup
+ar15 1.1038 1  obsgroup
+ar16 1.03086 1  obsgroup
+ar17 1.01318 1  obsgroup
+ar18 1.00593 1  obsgroup
+ar19 1.00272 1  obsgroup
+* model command line
+a_model
+* model input/output
+a_model.tp1 a_model.in1
+a_model.tp2 a_model.in2
+a_model.is1 a_model.ot1
+a_model.is2 a_model.ot2
+a_model.is3 a_model.ot3
+* prior information
+
+
