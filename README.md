@@ -1,5 +1,5 @@
 ## SWMM2PEST
-SWMM2PEST is a scientific software that used for calibration.
+SWMM2PEST is a scientific software for calibration.
 
 ## Purpose & Motivate
 Due to the lack of automated parameter mapping and data conversion, engineers must manually prepare input files to execute Storm Water Management Model (SWMM) and Parameter ESTimation (PEST).
