@@ -31,6 +31,9 @@ C. Calibration
 2. Provide the type of observation data.
 3. Click "Run Calibration".
 <br/><img height="250" src="https://github.com/XuanyiLin/SWMM2PEST2.0/blob/master/Images/3.png"/><br/>
+## Demo
+<br/><img height="350" src="https://github.com/XuanyiLin/SWMM2PEST2.0/blob/master/Images/Demo.gif"/><br/>
+
 ## Caveats
 1. Do not include the parameter with a value of 0 to do the calibration.
 2. The folder path of the input file cannot contain spaces.
