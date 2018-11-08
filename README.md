@@ -7,7 +7,7 @@ Most of the time and cost are waste when transferring data back and forth and re
 Regarding this situation, SWMM2PEST is developed to automate the calibration process of SWMM by integrating the essential modules of PEST.
 
 ## Introduction
-SWMM2PEST 2.0 is a new version of SWMM2PEST developed in Python 3.5.4 and PyQt 5 and released in public domain. It fixes lots of bugs, adds new features, rebuilds the framework and UI, and integrates SWMM 5.1.10 and PEST 14.2.
+SWMM2PEST 2.0 is a new version of SWMM2PEST developed in Python 3.5.4 and PyQt 5 and released in public domain. It fixed lots of bugs, added new features, rebuilt the framework and UI, and integrated SWMM 5.1.10 and PEST 14.2.
 
 ## References
 SWMM: https://www.epa.gov/water-research/storm-water-management-model-swmm
