@@ -19,11 +19,13 @@ A. Input File Selection
 1. Provide SWMM input file (.inp). 
 2. Click "Start".
 <br/><img height="280" src="https://github.com/XuanyiLin/SWMM2PEST2.0/blob/master/Images/1.png"/><br/>
+
 B. Parameters Selection
 1. Click on the Subcatchment or LID_Controls to display the parameter and their values. 
 2. Select the parameters to be calibrated. Enter the lower and upper limits in the boxes below the parameters to be calibrated and check the "Calibration" box.
 3. Click "Run".
 <br/><img height="350" src="https://github.com/XuanyiLin/SWMM2PEST2.0/blob/master/Images/2.png"/><br/>
+
 C. Calibration 
 1. Provide the file containing observed or field values for the selected output parameter. The field values’ time stamp must begin with start time of the output file. 
 2. Provide the type of observation data.
