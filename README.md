@@ -40,6 +40,6 @@ C. Calibration
 ## Project status
 SWMM2PEST 2.0: June 2018
 
-SWMM2PEST: August 2017
+[SWMM2PEST](https://github.com/SurajKamble/SWMM2PEST): August 2017
 ## Contributing
 Everyone is welcome to contribute to this project.
