@@ -1,0 +1,69 @@
+    PARAMETER SENSITIVITIES: CASE c:\villanovainfiltrationtrench\1\itrench20cal
+
+
+ OPTIMISATION ITERATION NO.  1 ----->
+ Parameter name    Group          Current value    Sensitivity
+   scprcnt_ntll    paragroup        10.9293         0.972169    
+   strg_lyr_vd_    paragroup       0.430000          7.78228    
+   strg_lyr_clg    paragroup        650.000         1.458990E-06
+   drn_cffcnt      paragroup       0.100000         0.569830    
+   drn_xpnnt       paragroup       0.100000         0.286954    
+
+
+ OPTIMISATION ITERATION NO.  2 ----->
+ Parameter name    Group          Current value    Sensitivity
+   scprcnt_ntll    paragroup        10.7497         0.970030    
+   strg_lyr_vd_    paragroup       0.440789          7.43320    
+   strg_lyr_clg    paragroup        652.939         1.413747E-06
+   drn_cffcnt      paragroup       0.149192         0.375182    
+   drn_xpnnt       paragroup       2.000000E-02     0.279209    
+
+
+ OPTIMISATION ITERATION NO.  3 ----->
+ Parameter name    Group          Current value    Sensitivity
+   scprcnt_ntll    paragroup        10.7232         0.970006    
+   strg_lyr_vd_    paragroup       0.442412          7.37984    
+   strg_lyr_clg    paragroup        653.318         1.403912E-06
+   drn_cffcnt      paragroup       0.162393         0.356038    
+   drn_xpnnt       paragroup       1.000000E-02     0.288426    
+
+
+ OPTIMISATION ITERATION NO.  4 ----->
+ Parameter name    Group          Current value    Sensitivity
+   scprcnt_ntll    paragroup        2.14465         0.704377    
+   strg_lyr_vd_    paragroup       0.480000          1.41771    
+   strg_lyr_clg    paragroup        1195.71         1.130516E-07
+   drn_cffcnt      paragroup       0.416915         0.127228    
+   drn_xpnnt       paragroup       1.000000E-02     0.203013    
+
+
+ OPTIMISATION ITERATION NO.  5 ----->
+ Parameter name    Group          Current value    Sensitivity
+   scprcnt_ntll    paragroup        2.14261         0.703848    
+   strg_lyr_vd_    paragroup       0.480000          1.41596    
+   strg_lyr_clg    paragroup        239.141         2.832301E-06
+   drn_cffcnt      paragroup       0.366169         0.142602    
+   drn_xpnnt       paragroup       3.997678E-02     0.199945    
+
+
+ OPTIMISATION ITERATION NO.  6 ----->
+ Parameter name    Group          Current value    Sensitivity
+   scprcnt_ntll    paragroup        2.13752         0.702595    
+   strg_lyr_vd_    paragroup       0.480000          1.41045    
+   strg_lyr_clg    paragroup        47.8283         7.081604E-05
+   drn_cffcnt      paragroup       0.234066         0.201994    
+   drn_xpnnt       paragroup       0.131067         0.181919    
+
+
+
+                        COMPLETION OF OPTIMISATION PROCESS
+
+ Composite sensitivities for all observations/prior info ----->
+
+ Number of observations with non-zero weight =   219
+ Parameter name    Group          Current value    Sensitivity
+   scprcnt_ntll    paragroup        2.14261         0.704377    
+   strg_lyr_vd_    paragroup       0.480000          1.41771    
+   strg_lyr_clg    paragroup        239.141         1.130516E-07
+   drn_cffcnt      paragroup       0.366169         0.127228    
+   drn_xpnnt       paragroup       3.997678E-02     0.203013    

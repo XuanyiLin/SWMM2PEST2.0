@@ -1,0 +1,26 @@
+   PARAMETER SENSITIVITIES: CASE c:/villanovainfiltrationtrench/2/itrench20val1
+
+
+ OPTIMISATION ITERATION NO.  1 ----->
+ Parameter name    Group          Current value    Sensitivity
+ Phi gradient zero:-   all parameter sensitivities are zero or near-zero.
+
+
+ OPTIMISATION ITERATION NO.  2 ----->
+ Parameter name    Group          Current value    Sensitivity
+   pkn_perv        paragroup       0.100000         1.170513E-15
+
+
+ OPTIMISATION ITERATION NO.  3 ----->
+ Parameter name    Group          Current value    Sensitivity
+ Phi gradient zero:-   all parameter sensitivities are zero or near-zero.
+
+
+
+                        COMPLETION OF OPTIMISATION PROCESS
+
+ Composite sensitivities for all observations/prior info ----->
+
+ Number of observations with non-zero weight =   405
+ Parameter name    Group          Current value    Sensitivity
+   pkn_perv        paragroup       0.100000          0.00000    
