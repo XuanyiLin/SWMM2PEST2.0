@@ -22,7 +22,7 @@ A. Input File Selection
 
 B. Parameters Selection
 1. Click on the Subcatchment or LID_Controls to display the parameter and their values. 
-2. Select the parameters to be calibrated. Enter the lower and upper limits in the boxes below the parameters to be calibrated and check the "Calibration" box.
+2. Select the parameters to be calibrated. Enter the lower and upper limits in the boxes below the parameters to be calibrated and check the "Calibrate" box.
 3. Click "Run".
 <br/><img height="350" src="https://github.com/XuanyiLin/SWMM2PEST2.0/blob/master/Images/2.png"/><br/>
 
