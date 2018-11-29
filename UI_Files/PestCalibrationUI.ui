@@ -115,47 +115,57 @@
     </property>
     <item>
      <property name="text">
-      <string>Drain Outflow</string>
+      <string>Total Evaporation(in/hr)</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Total Evaporation</string>
+      <string>Surface Infiltration(in/hr)</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Surface Infiltration</string>
+      <string>Pavement Perc(in/hr)</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Soil Perc</string>
+      <string>Soil Perc(in/hr)</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Bottom Infiltration</string>
+      <string>Storage Exfil(in/hr)</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Surface Runoff</string>
+      <string>Surface Runoff(in/hr)</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Surface Depth</string>
+      <string>Drain Outflow(in/hr)</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Soil/Pave Moist</string>
+      <string>Surface Level(inches)</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Storage Depth</string>
+      <string>Pavement Level(inches)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Soil Moisture content</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Storage Level (inches)</string>
      </property>
     </item>
    </widget>

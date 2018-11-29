@@ -52,7 +52,7 @@ class SwmmThread(QThread): # Separate thread that calls swmm and runs it in the 
 
     def run_swmm_command(self, inp_fname):
         print("In run swmm thread")
-        cmd_line = "swmm\\swmm5110.exe " + inp_fname +" temp.rpt" # Set Command line
+        cmd_line = "swmm\\swmm5.exe " + inp_fname +" temp.rpt" # Set Command line
         print(cmd_line)
         os.system(cmd_line)
 
@@ -157,24 +157,28 @@ class MainFrame(QMainWindow, NewFileUI.Ui_MainWindow): # This class contains all
 
         observationType=self.pestCalibrationWindow.comboBox_ODT.currentText()
         print(observationType)
-        if observationType=='Total Evaporation':
+        if observationType=='Total Evaporation(in/hr)':
             index_needed=2
-        elif observationType=='Surface Infiltration':
+        elif observationType=='Surface Infiltration(in/hr)':
             index_needed=3
-        elif observationType=='Soil Perc':
+        elif observationType=='Pavement Perc(in/hr)':
             index_needed=4
-        elif observationType=='Bottom Infiltration':
-            index_needed=5
-        elif observationType=='Surface Runoff':
+        elif observationType == 'Soil Perc(in/hr)':
+            index_needed =5
+        elif observationType=='Storage Exfil(in/hr)':
             index_needed=6
-        elif observationType=='Drain Outflow':
+        elif observationType=='Surface Runoff(in/hr)':
             index_needed=7
-        elif observationType=='Surface Depth':
+        elif observationType=='Drain Outflow(in/hr)':
             index_needed=8
-        elif observationType=='Soil/Pave Moist':
+        elif observationType=='Surface Level(inches)':
             index_needed=9
-        elif observationType=='Storage Depth':
-            index_needed=10
+        elif observationType == 'Pavement Level(inches)':
+            index_needed =10
+        elif observationType=='Soil Moisture content':
+            index_needed=11
+        elif observationType=='Storage Level (inches)':
+            index_needed=12
 
         index_needed += 1
         self.observationType=observationType #record the observationType
@@ -196,40 +200,48 @@ class MainFrame(QMainWindow, NewFileUI.Ui_MainWindow): # This class contains all
 
         if index == 2:
             obs_name = "tevap"
-            location_start = 35
-            location_end = 42
+            location_start = 44
+            location_end = 51
         if index == 3:
             obs_name = "sinfil"
-            location_start = 44
-            location_end = 52
+            location_start = 55
+            location_end = 61
         if index == 4:
-            obs_name = "sperc"
-            location_start = 54
-            location_end = 62
+            obs_name = "pperc"
+            location_start = 65
+            location_end = 71
         if index == 5:
-            obs_name = "binfil"
-            location_start = 64
-            location_end = 72
+            obs_name = "sperc"
+            location_start = 75
+            location_end = 81
         if index == 6:
-            obs_name = "srunoff"
-            location_start = 74
-            location_end = 82
+            obs_name = "stexfil"
+            location_start = 85
+            location_end = 91
         if index == 7:
-            obs_name = "dflow"
-            location_start = 84
-            location_end = 92
-        if index == 8:
-            obs_name = "sudepth"
+            obs_name = "srunoff"
             location_start = 94
-            location_end = 102
-        if index == 9:
-            obs_name = "smoist"
+            location_end = 100
+        if index == 8:
+            obs_name = "dflow"
             location_start = 104
-            location_end = 112
-        if index == 10:
-            obs_name = "stdepth"
+            location_end = 110
+        if index == 9:
+            obs_name = "sulevel"
             location_start = 114
-            location_end = 122
+            location_end = 120
+        if index == 10:
+            obs_name = "plevel"
+            location_start = 124
+            location_end = 130
+        if index == 11:
+            obs_name = "smoist"
+            location_start = 134
+            location_end = 140
+        if index == 12:
+            obs_name = "stlevel"
+            location_start = 144
+            location_end = 149
 
         print("After Switch Case")
 
@@ -264,12 +276,12 @@ class MainFrame(QMainWindow, NewFileUI.Ui_MainWindow): # This class contains all
         self.obs_name = obs_name
 
         while line_num < len(lines):
+            # date (SWMM output file)
             dstamp = lines[line_num].split()[0]
+            dstamp = dstamp.split("/")[0] + dstamp.split("/")[1]
 
-            dstamp = dstamp.split("-")[0] + dstamp.split("-")[1]
-
+            # time (SWMM output file)
             tstamp = lines[line_num].split()[1]
-
             tstamp = tstamp.split(":")[0] + tstamp.split(":")[1]
 
             # print(dstamp + tstamp)
@@ -338,7 +350,7 @@ class MainFrame(QMainWindow, NewFileUI.Ui_MainWindow): # This class contains all
 
         all_selected_pars.extend(self.lid_controls_data.get_all_selected_pars())
         num_of_pars = len(all_selected_pars)
-        print(obs_data[:50])
+        # print(obs_data[:50])
         num_of_obs = len(obs_data)
 
         control_file_data += "   " + str(num_of_pars) + "    " + str(num_of_obs) + "    " + "1    0    1\n"
@@ -385,9 +397,10 @@ class MainFrame(QMainWindow, NewFileUI.Ui_MainWindow): # This class contains all
         obs_lines = ""
 
         while line_num < len(lines):
-
+            # date (SWMM output file)
             dstamp = lines[line_num].split()[0]
-            dstamp = dstamp.split("-")[0] + dstamp.split("-")[1]
+            dstamp = dstamp.split("/")[0] + dstamp.split("/")[1]
+            # time (SWMM output file)
             tstamp = lines[line_num].split()[1]
             tstamp = tstamp.split(":")[0] + tstamp.split(":")[1]
             # print(dstamp + tstamp)
@@ -405,7 +418,7 @@ class MainFrame(QMainWindow, NewFileUI.Ui_MainWindow): # This class contains all
 
         self.rpt_fname = self.inp_fname[:-3] + "rpt"
         self.out_fname1 = self.inp_fname[:-3] + "out"
-        command_line_data = "swmm\\swmm5110.exe " + self.inp_fname + " " + self.rpt_fname + " " + self.out_fname1 + "\n\n"
+        command_line_data = "swmm\\swmm5.exe " + self.inp_fname + " " + self.rpt_fname + " " + self.out_fname1 + "\n\n"
 
         control_file_data += command_line_data
 

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'PestCalibration.ui'
+# Form implementation generated from reading ui file 'PestCalibrationUI.ui'
 #
 # Created by: PyQt5 UI code generator 5.6
 #
@@ -64,6 +64,8 @@ class Ui_mainWindow(object):
         self.comboBox_ODT.addItem("")
         self.comboBox_ODT.addItem("")
         self.comboBox_ODT.addItem("")
+        self.comboBox_ODT.addItem("")
+        self.comboBox_ODT.addItem("")
         self.runCalibrationButton = QtWidgets.QPushButton(self.centralwidget)
         self.runCalibrationButton.setGeometry(QtCore.QRect(100, 400, 220, 47))
         font = QtGui.QFont()
@@ -93,14 +95,16 @@ class Ui_mainWindow(object):
         self.label_chooseObservationFile.setText(_translate("mainWindow", "Choose Observation Data File:"))
         self.observationBrowse.setText(_translate("mainWindow", "Browse..."))
         self.label_chooseObservationType.setText(_translate("mainWindow", "Choose Observation Data Type:"))
-        self.comboBox_ODT.setItemText(0, _translate("mainWindow", "Drain Outflow"))
-        self.comboBox_ODT.setItemText(1, _translate("mainWindow", "Total Evaporation"))
-        self.comboBox_ODT.setItemText(2, _translate("mainWindow", "Surface Infiltration"))
-        self.comboBox_ODT.setItemText(3, _translate("mainWindow", "Soil Perc"))
-        self.comboBox_ODT.setItemText(4, _translate("mainWindow", "Bottom Infiltration"))
-        self.comboBox_ODT.setItemText(5, _translate("mainWindow", "Surface Runoff"))
-        self.comboBox_ODT.setItemText(6, _translate("mainWindow", "Surface Depth"))
-        self.comboBox_ODT.setItemText(7, _translate("mainWindow", "Soil/Pave Moist"))
-        self.comboBox_ODT.setItemText(8, _translate("mainWindow", "Storage Depth"))
+        self.comboBox_ODT.setItemText(0, _translate("mainWindow", "Total Evaporation(in/hr)"))
+        self.comboBox_ODT.setItemText(1, _translate("mainWindow", "Surface Infiltration(in/hr)"))
+        self.comboBox_ODT.setItemText(2, _translate("mainWindow", "Pavement Perc(in/hr)"))
+        self.comboBox_ODT.setItemText(3, _translate("mainWindow", "Soil Perc(in/hr)"))
+        self.comboBox_ODT.setItemText(4, _translate("mainWindow", "Storage Exfil(in/hr)"))
+        self.comboBox_ODT.setItemText(5, _translate("mainWindow", "Surface Runoff(in/hr)"))
+        self.comboBox_ODT.setItemText(6, _translate("mainWindow", "Drain Outflow(in/hr)"))
+        self.comboBox_ODT.setItemText(7, _translate("mainWindow", "Surface Level(inches)"))
+        self.comboBox_ODT.setItemText(8, _translate("mainWindow", "Pavement Level(inches)"))
+        self.comboBox_ODT.setItemText(9, _translate("mainWindow", "Soil Moisture content"))
+        self.comboBox_ODT.setItemText(10, _translate("mainWindow", "Storage Level (inches)"))
         self.runCalibrationButton.setText(_translate("mainWindow", "Run Calibration"))
 
