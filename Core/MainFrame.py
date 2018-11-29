@@ -19,6 +19,7 @@ from PyQt5.QtWidgets import QMainWindow, QFileDialog, QApplication, qApp
 from Core.ReadSections import ReadSections
 from Core.WriteSections import write_sections
 from Core.UpdateParameter import UpdateParameter
+from Core.ObservationData import ObservationData
 from Py_UI_Files import NewFileUI,MainFrameUI, HelpWindowUI, PestCalibrationUI
 from Py_UI_Files.FormUI import *
 
@@ -278,7 +279,7 @@ class MainFrame(QMainWindow, NewFileUI.Ui_MainWindow): # This class contains all
         while line_num < len(lines):
             # date (SWMM output file)
             dstamp = lines[line_num].split()[0]
-            dstamp = dstamp.split("/")[0] + dstamp.split("/")[1]
+            dstamp = dstamp.split("/")[0] + dstamp.split("/")[1]+ dstamp.split("/")[2]
 
             # time (SWMM output file)
             tstamp = lines[line_num].split()[1]
@@ -301,15 +302,16 @@ class MainFrame(QMainWindow, NewFileUI.Ui_MainWindow): # This class contains all
 
     def createControlFile(self):     # Create control file(.pst) based on all the data provided
 
-        # Read observation file
+        # get observation file name
         obs_fname=self.observation_fname
 
         '''
         Read observation file
         '''
 
-        with open(obs_fname, 'r') as f:
-            obs_data = f.readlines()
+        observationData=ObservationData()
+        observationData.readObsFile(obs_fname)
+        self.measured_data = observationData.getAllValue()
 
         '''
         Add control data
@@ -328,8 +330,6 @@ class MainFrame(QMainWindow, NewFileUI.Ui_MainWindow): # This class contains all
             1     1     1
         
         '''
-
-        self.measured_data = obs_data
 
         '''
         * control data
@@ -352,7 +352,8 @@ class MainFrame(QMainWindow, NewFileUI.Ui_MainWindow): # This class contains all
         all_selected_pars.extend(self.lid_controls_data.get_all_selected_pars())
         num_of_pars = len(all_selected_pars)
         # print(obs_data[:50])
-        num_of_obs = len(obs_data)
+        # make number of observation data equal to number of output data
+        num_of_obs = len(self.out_lines)
 
         control_file_data += "   " + str(num_of_pars) + "    " + str(num_of_obs) + "    " + "1    0    1\n"
         control_file_data +=  "    1     1 single point 1 0 0\n"
@@ -400,13 +401,16 @@ class MainFrame(QMainWindow, NewFileUI.Ui_MainWindow): # This class contains all
         while line_num < len(lines):
             # date (SWMM output file)
             dstamp = lines[line_num].split()[0]
-            dstamp = dstamp.split("/")[0] + dstamp.split("/")[1]
+            dstamp = dstamp.split("/")[0] + dstamp.split("/")[1] +dstamp.split("/")[2]
             # time (SWMM output file)
             tstamp = lines[line_num].split()[1]
             tstamp = tstamp.split(":")[0] + tstamp.split(":")[1]
-            # print(dstamp + tstamp)
+            # get observed value
+            obs_value=observationData.getObservationValue(dstamp,tstamp)
+            if obs_value=="":
+                print("ERROR, not find the observed value of specific time")
 
-            line = obs_name + dstamp + tstamp + "               " + str(obs_data[line_num].strip('\n')) + "    1.0  obsgroup" "\n"
+            line = obs_name + dstamp + tstamp + "               " + obs_value + "    1.0  obsgroup" "\n"
             obs_lines += line
             line_num += 1
         control_file_data += obs_lines + "\n"
