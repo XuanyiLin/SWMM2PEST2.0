@@ -297,10 +297,11 @@ class MainFrame(QMainWindow, NewFileUI.Ui_MainWindow): # This class contains all
         with open(self.ins_fname, 'w') as f:
             f.write(ins_lines)
 
-        self.readObsFile()
+        self.createControlFile()
 
-    def readObsFile(self):     # Read observation file and create control file based on all the data provided
+    def createControlFile(self):     # Create control file(.pst) based on all the data provided
 
+        # Read observation file
         obs_fname=self.observation_fname
 
         '''
