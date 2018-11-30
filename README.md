@@ -17,6 +17,7 @@ PEST: http://www.pesthomepage.org/
 ## How to run
 A. Run in Pycharm
 1. Run MainFrame.py.
+
 B. Run as Windows application
 1. Download [SWMM2PEST](https://github.com/XuanyiLin/SWMM2PEST2.0/releases/download/V2.1/SWMM2PEST.V2.1.zip).
 2. Unzip the file.
