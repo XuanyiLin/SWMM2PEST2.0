@@ -35,10 +35,10 @@ C. Calibration
 <br/><img height="350" src="https://github.com/XuanyiLin/SWMM2PEST2.0/blob/master/Images/Demo.gif"/><br/>
 
 ## Caveats
-1. Do not include the parameter with a value of 0 to do the calibration.
+1. Do not include the parameter with a value of 0 to do the calibration. 0 can be in the calibration range.
 2. The folder path of the input file cannot contain spaces.
 3. Same parameters in SWMM input file and observation file must be in the same unit.
-4. Make sure the numbers of observation data is equal to that of SWMM output data. (If the time interval of observation data is every 5 minutes, then rename 'swmm5_110Biocell.exe' (located in swmm folder) to 'swmm5110.exe'.)
+4. Make sure the observation data format is correct. each line in the observation data file should contain date (mm/dd/yyyy), time (hh:mm:ss) and value, e.g. 01/30/2018 06:59:00 0.0001.
 
 ## Project status
 SWMM2PEST 2.0: June 2018
