@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_mainWindow(object):
     def setupUi(self, mainWindow):
         mainWindow.setObjectName("mainWindow")
-        mainWindow.resize(800, 600)
+        mainWindow.resize(778, 592)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("Images/EPA1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         mainWindow.setWindowIcon(icon)
@@ -79,7 +79,7 @@ class Ui_mainWindow(object):
         self.runCalibrationButton.setObjectName("runCalibrationButton")
         mainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(mainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 38))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 778, 38))
         self.menubar.setObjectName("menubar")
         mainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(mainWindow)
