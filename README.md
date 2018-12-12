@@ -2,17 +2,18 @@
 SWMM2PEST is a scientific software for calibration.
 
 ## Purpose & Motivation
-Hydrologists and engineers must manually prepare input files to execute Storm Water Management Model (SWMM) to use and Parameter ESTimation (PEST) Due to the lack of automation.
+Hydrologists and engineers must manually prepare input files to execute Storm Water Management Model (SWMM) and to use Parameter ESTimation (PEST) due to the lack of automation.
 Most of the time and cost are wasted when transferring data back and forth and reading files between two software.
 Regarding this situation, SWMM2PEST is developed to automate the calibration process of SWMM by integrating the essential modules of PEST.
 
 ## Introduction
-[SWMM2PEST 2.0](https://github.com/XuanyiLin/SWMM2PEST2.0) is a new version of [SWMM2PEST](https://github.com/SurajKamble/SWMM2PEST) developed in Python 3.5.4 and PyQt 5 and released in public domain. It fixed lots of bugs, added new features, rebuilt the framework and UI, and integrated SWMM 5.1.10 and PEST 14.2. Note that both SWMM 5 and PEST are necessary to run SWMM2PEST. SWMM2PEST Verions 2.1 was developed for SWMM 5.1.013.
+[SWMM2PEST 2.0](https://github.com/XuanyiLin/SWMM2PEST2.0) is a new version of [SWMM2PEST](https://github.com/SurajKamble/SWMM2PEST) developed in Python 3.5.4 and PyQt 5 and released in public domain. It fixed lots of bugs, added new features, rebuilt the framework and UI, and integrated SWMM 5.1.10 and PEST 14.2.
 
 ## References
 SWMM: https://www.epa.gov/water-research/storm-water-management-model-swmm
 
 PEST: http://www.pesthomepage.org/
+Note that both SWMM 5 and PEST are necessary to run SWMM2PEST. SWMM2PEST Verions 2.1 was developed for SWMM 5.1.013.
 
 ## How to run
 A. Run in Pycharm
