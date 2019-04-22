@@ -514,11 +514,25 @@ class MainFrame(QMainWindow, NewFileUI.Ui_MainWindow): # This class contains all
         self.win.setBackground(pg.mkColor('w')) #Set background
 
         # r_squared1 = self.r_squared(self.output_values_before_calibration, self.measured_data)
-        NS1=spotpy.objectivefunctions.nashsutcliffe(self.output_values_before_calibration, self.measured_data)
+        r1=spotpy.objectivefunctions.correlationcoefficient(self.output_values_before_calibration, self.measured_data)
         r_squared1 =spotpy.objectivefunctions.rsquared(self.output_values_before_calibration, self.measured_data)
+        NS1 = spotpy.objectivefunctions.nashsutcliffe(self.output_values_before_calibration, self.measured_data)
+        PBIAS1=spotpy.objectivefunctions.pbias(self.output_values_before_calibration, self.measured_data)
+        RSR1=spotpy.objectivefunctions.rsr(self.output_values_before_calibration, self.measured_data)
+        d1=spotpy.objectivefunctions.agreementindex(self.output_values_before_calibration, self.measured_data)
+        RMSE1=spotpy.objectivefunctions.rmse(self.output_values_before_calibration, self.measured_data)
+        MAE1=spotpy.objectivefunctions.mae(self.output_values_before_calibration, self.measured_data)
+
+        label_r1="r= "+str(r1)+"<Br/>"
         label_r_squared1="R squared= "+str(r_squared1) +"<Br/>"
         label_NSE1='Nash-Sutcliffe efficiency= '+str(NS1)+"<Br/>"
-        label_bottom1='<Br/>Time Series<Br/><Br/>'+label_r_squared1+label_NSE1
+        label_PBIAS1="PBIAS= "+str(PBIAS1)+"<Br/>"
+        label_RSR1="RSR= "+str(RSR1)+"<Br/>"
+        label_d1="d= "+str(d1)+"<Br/>"
+        label_RMSE1="RMSE= "+str(RMSE1)+"<Br/>"
+        label_MAE1="MAE= "+str(MAE1)+"<Br/>"
+
+        label_bottom1='<Br/><Br/><Br/>Time Series<Br/><Br/>'+label_r1+label_r_squared1+label_NSE1+label_PBIAS1+label_RSR1+label_d1+label_RMSE1+label_MAE1
         # print(NS1)
         p = self.win.addPlot() #Plot 1st Graph
         p.setLabel('top','Measured data Vs. Output data<Br/>',color='000000',size='8pt')
@@ -531,11 +545,25 @@ class MainFrame(QMainWindow, NewFileUI.Ui_MainWindow): # This class contains all
         p.plot(self.measured_data, pen=pg.mkPen('b', width=2), name="Measured data")
         p.plot(self.output_values_before_calibration, pen=pg.mkPen('r', width=2), name="Output before calibration")
 
+        r2 = spotpy.objectivefunctions.correlationcoefficient(self.output_values_after_calibration, self.measured_data)
         r_squared2 = spotpy.objectivefunctions.rsquared(self.output_values_after_calibration, self.measured_data)
         NS2=spotpy.objectivefunctions.nashsutcliffe(self.output_values_after_calibration, self.measured_data)
+        PBIAS2 = spotpy.objectivefunctions.pbias(self.output_values_after_calibration, self.measured_data)
+        RSR2 = spotpy.objectivefunctions.rsr(self.output_values_after_calibration, self.measured_data)
+        d2 = spotpy.objectivefunctions.agreementindex(self.output_values_after_calibration, self.measured_data)
+        RMSE2 = spotpy.objectivefunctions.rmse(self.output_values_after_calibration, self.measured_data)
+        MAE2 = spotpy.objectivefunctions.mae(self.output_values_after_calibration, self.measured_data)
+
+        label_r2="r= "+str(r2)+"<Br/>"
         label_r_squared2 = "R squared= " + str(r_squared2)+"<Br/>"
         label_NSE2='Nash-Sutcliffe efficiency= '+str(NS2)+"<Br/>"
-        label_bottom2='<Br/>Time Series<Br/><Br/>'+label_r_squared2+label_NSE2
+        label_PBIAS2 = "PBIAS= " + str(PBIAS2) + "<Br/>"
+        label_RSR2 = "RSR= " + str(RSR2) + "<Br/>"
+        label_d2="d= "+str(d2)+"<Br/>"
+        label_RMSE2="RMSE= "+str(RMSE2)+"<Br/>"
+        label_MAE2="MAE= "+str(MAE2)+"<Br/>"
+
+        label_bottom2='<Br/><Br/><Br/>Time Series<Br/><Br/>'+label_r2+label_r_squared2+label_NSE2+label_PBIAS2+label_RSR2+label_d2+label_RMSE2+label_MAE2
         # print(NS2)
         p1 = self.win.addPlot() #Plot 2nd Graph
         p1.setLabel('top', 'Measured data Vs. Output data<Br/>', color='000000', size='8pt')
