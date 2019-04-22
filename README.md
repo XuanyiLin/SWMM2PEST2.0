@@ -1,9 +1,9 @@
 ## SWMM2PEST
 SWMM2PEST is a scientific software for calibration.
 
-## Purpose & Motivate
-Due to the lack of automated parameter mapping and data conversion, engineers must manually prepare input files to execute Storm Water Management Model (SWMM) and Parameter ESTimation (PEST).
-Most of the time and cost are waste when transferring data back and forth and reading files between two software.
+## Purpose & Motivation
+Hydrologists and engineers must manually prepare input files to execute Storm Water Management Model (SWMM) and to use Parameter ESTimation (PEST) due to the lack of automation.
+Most of the time and cost are wasted when transferring data back and forth and reading files between two software.
 Regarding this situation, SWMM2PEST is developed to automate the calibration process of SWMM by integrating the essential modules of PEST.
 
 ## Introduction
@@ -13,6 +13,17 @@ Regarding this situation, SWMM2PEST is developed to automate the calibration pro
 SWMM: https://www.epa.gov/water-research/storm-water-management-model-swmm
 
 PEST: http://www.pesthomepage.org/
+
+Note that both SWMM 5 and PEST are necessary to run SWMM2PEST. SWMM2PEST Verions 2.1 was developed for SWMM 5.1.013.
+
+## How to run
+A. Run in Pycharm
+1. Run MainFrame.py.
+
+B. Run as Windows application
+1. Download [SWMM2PEST](https://github.com/XuanyiLin/SWMM2PEST2.0/releases/download/V2.1/SWMM2PEST.V2.1.zip).
+2. Unzip the file.
+3. Run SWMM2PEST.exe.
 
 ## How to use
 A. Input File Selection
@@ -35,10 +46,10 @@ C. Calibration
 <br/><img height="350" src="https://github.com/XuanyiLin/SWMM2PEST2.0/blob/master/Images/Demo.gif"/><br/>
 
 ## Caveats
-1. Do not include the parameter with a value of 0 to do the calibration.
+1. Do not include the parameter with a value of 0 to do the calibration. 0 can be in the calibration range.
 2. The folder path of the input file cannot contain spaces.
 3. Same parameters in SWMM input file and observation file must be in the same unit.
-4. Make sure the numbers of observation data is equal to that of SWMM output data. (If the time interval of observation data is every 5 minutes, then rename 'swmm5_110Biocell.exe' (located in swmm folder) to 'swmm5110.exe'.)
+4. Make sure the observation data format is the same format as the output file. each line in the observation data file should contain date (mm/dd/yyyy), time (hh:mm:ss) and value, e.g. 01/30/2018 06:59:00 0.0001.
 
 ## Project status
 SWMM2PEST 2.0: June 2018
